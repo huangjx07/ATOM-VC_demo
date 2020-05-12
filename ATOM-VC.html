@@ -1,0 +1,122 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ATOM-VC: Any-to-Many Voice Conversion Network without Parallel Data</title>
+<style type="text/css">
+</style><style type="text/css" abt="234"></style></head>
+<body>
+<h2><strong>Audio Samples from "ATOM-VC: Any-to-Many Voice Conversion Network without Parallel Data</strong>"</h2>
+
+<h3>Authors: </h3>
+Jiexiong Huang, Changjun Dai, Tianwei He, Hongbin Zhou
+<h3>Abstract: </h3>
+This paper proposes ATOM-VC, which is an any-to-many voice conversion network without parallel data. Our proposed network is built based on recognition-synthesis approach. The new ASR network is designed to learn the phonetic representations of speech content. Then, a multi-speaker conversion model is proposed for well mapping the phonetic representation and acoustic features with the help of utterance-level speaker embedding.  The pre-trained LPCNet using multi-speaker speech corpus will recover the converted speech waveform. In this paper, we also improve the LPCNet to generate the converted audios with higher sample rates. Experiments show that compared with the results in both MOS tests and ABX preference tests, our proposed voice conversion network achieves a better performance than other methods.
+<p>&nbsp;</p>
+<hr>
+<h3>0. Ground truth target samples</h3>
+<table border="1">
+  <tbody><tr>
+  <td width="120px">&nbsp;
+  
+  </td>
+    <td colspan="2"><blockquote>
+    
+              <p align="center">rms</p>
+          
+    </blockquote></td>
+    <td colspan="2"><blockquote>
+     
+              <p align="center">slt</p>
+           
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td><div align="center">ground truth</div></td>
+    <td><audio src="./demo-vc/ground truth/source/rms_a0058.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="./demo-vc/ground truth/source/rms_a0138.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="./demo-vc/ground truth/source/slt_b0247.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="./demo-vc/ground truth/source/slt_b0496.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+  </tr>
+
+  
+
+</tbody></table>
+
+<h3>&nbsp;</h3>
+<h3>1. Comparsion of ATOM-VC to baseline methods</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tbody><tr>
+    <td colspan="1"><div align="center">Methods</div></td>
+    <td colspan="2"><p align="center">rms-to-slt</p></td>
+    <td colspan="2"><p align="center">slt-to-rms</p></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"><em> S2SVC_LPCNet </em></div></td>
+    <td width="169"><audio src="./demo-vc/compare_to_S2S/s2s_lpcnet/rms_a0058_to_slt_tc2vc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="187"><audio src="./demo-vc/compare_to_S2S/s2s_lpcnet/rms_a0138_to_slt_tc2vc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="155"><audio src="./demo-vc/compare_to_S2S/s2s_lpcnet/slt_b0247_to_rms_tc2vc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="157"><audio src="./demo-vc/compare_to_S2S/s2s_lpcnet/slt_b0496_to_rms_tc2vc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"><em> S2SVC_WaveNet </em></div></td>
+    <td width="169"><audio src="./demo-vc/compare_to_S2S/s2s_wavenet/rms_a0058_to_slt_nonpara.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="187"><audio src="./demo-vc/compare_to_S2S/s2s_wavenet/rms_a0138_to_slt_nonpara.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="155"><audio src="./demo-vc/compare_to_S2S/s2s_wavenet/slt_b0247_to_rms_nonpara.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="157"><audio src="./demo-vc/compare_to_S2S/s2s_wavenet/slt_b0496_to_rms_nonpara.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"><em> ATOM-VC </em></div></td>
+    <td width="169"><audio src="./demo-vc/compare_to_S2S/atom-vc/rms_a0058_to_slt_yyvc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="187"><audio src="./demo-vc/compare_to_S2S/atom-vc/rms_a0138_to_slt_yyvc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="155"><audio src="./demo-vc/compare_to_S2S/atom-vc/slt_b0247_to_rms_yyvc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="157"><audio src="./demo-vc/compare_to_S2S/atom-vc/slt_b0496_to_rms_yyvc.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+<h3>2. Comparsion of ATOM-VC to ATOM-VC_24k</h3>
+Since there is no samples of RMS and SLT with 24kHz sample rate, we compare the VC results converted to slt. <br><br>
+
+<table border="1">
+  <tbody><tr>
+   <td colspan="1"><div align="center"> </div></td>
+    <td colspan="1"><div align="center"> source_audio </div></td>
+    <td colspan="1"><p align="center"><em>ATOM-VC</em></p></td>
+    <td colspan="1"><p align="center"><em>ATOM-VC_24k</em></p></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"> source_1 </div></td>
+    <td><audio src="./demo-vc/compare_to_24k/source/awb_a0004.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/16k/awb_a0004_to_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/24k/awb_a0004_to_slt_24k.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"> source_2 </div></td>
+    <td><audio src="./demo-vc/compare_to_24k/source/awb_b0036.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/16k/awb_b0036_to_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/24k/awb_b0036_to_slt_24k.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"> source_3 </div></td>
+    <td><audio src="./demo-vc/compare_to_24k/source/clb_a0304.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/16k/clb_a0304_to_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/24k/clb_a0304_to_slt_24k.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td width="140" rowspan="1"><div align="center"> source_4 </div></td>
+    <td><audio src="./demo-vc/compare_to_24k/source/clb_a0343.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/16k/clb_a0343_to_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="./demo-vc/compare_to_24k/24k/clb_a0343_to_slt_24k.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+</tbody></table>
+<p>&nbsp;</p>
+
+</body></html>
